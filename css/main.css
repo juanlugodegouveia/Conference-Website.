@@ -668,6 +668,12 @@ div.invitado:hover p {
   filter: brightness(.8);
 }
 
+@media (max-width: 749px) {
+  .parallax::before  {
+    background-attachment: inherit;
+    filter: brightness(.8);
+  }
+}
 
 div.contador {
   position: relative;
