@@ -1,0 +1,1281 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html {
+  box-sizing: border-box; /* Modelo caja, para que cuando agreguemos un padding no nos afecte */
+}
+
+*,*::before,*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Globales */
+/* Ademas declaramos los tres media querys mas comunes 480px, 768px, 992px*/
+
+.contenedor {
+  width: 98%; /* Para que solo se expanda un 98% en un dispositivo pequeño y no tope con la orilla del navegador */
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 480px) {
+  .contenedor {
+    width: 95%;
+  }
+}
+
+@media only screen and (min-width: 768PX) {
+  .contenedor {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .contenedor {
+    width: 90%;
+    max-width: 1100px; /* Para que no se vaya tanto a la orilla izquierda */
+  }
+}
+
+.seccion {
+  padding: 30px 0; /* Le damos margen(con padding) a la seccion de información */
+}
+
+.seccion p {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.4em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2::after {
+  content: ''; /* Siempre que se use un after o before hay que colocar un content */
+  margin: 0 auto; /*El texto es centrado por lo tanto nuestro margen tambien */
+  background-image: url(../img/separador.png);
+  height: 30px;
+  width: 100px;
+  display: block;  /*Para poder visualizar la imagen */
+}
+
+h3 {
+  font-size: 1.7em;
+  color: #f34918;
+  font-family: 'PT Sans', sans-serif;
+  margin: 0;
+}
+
+.button {
+  background-color: #f34918;
+  padding: 10px 40px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+  font-size: 1em;
+  margin-top: 20px;
+  display: inline-block;
+  transition: all .3s ease;
+  border: 2px solid #fe4918;
+}
+
+.button.hollow, .button.hollow:hover {
+  background-color: white;
+  color: #f34918;
+}
+
+.button.transparente {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+}
+
+.button.transparente:hover {
+  border: 2px solid #f34918;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.button:hover {
+  background-color: #e33000;
+}
+
+.float-right {
+  float: right;
+}
+
+/*Lettering, efecto con plugin de jQuery*/
+h1.nombre-sitio span { /*Al utilizar el plugin, en el titulo se crea un span para cada letra*/
+  position: relative;
+  text-shadow: 0 0 30px black;
+}
+
+@media only screen and (min-width: 992px) {
+  .char1 { /*Char es la clase creada por el plugin, cada letra tiene un char*/
+    top: 20px; right: 20px;
+  }
+
+  .char2 {
+    top: 0px; left: -20px;
+  }
+
+  .char3 {
+    top: 10px; right: 20px;
+  }
+
+  .char4 {
+    top: 5px; right: 10px;
+  }
+
+  .char5 {
+    top: 15px; right: 10px;
+  }
+
+  .char6 {
+    top: 5px; right: 10px;
+  }
+
+  .char7 {
+    top: 20px; left: -10px;
+  }
+
+  .char8 {
+    top: 0px; right: 10px;
+  }
+
+  .char9 {
+    top: 10px; right: 20px;
+  }
+
+  .char10 {
+    top: 20px; right: 20px;
+  }
+}
+
+
+/** Header **/
+
+div.hero {
+  background-image: url(../img/encabezado.jpg);
+  height: 100vh; /* Asignación alto y ancho de imagen */
+  background-position: top center; /* Centramos la imagen */
+  background-size: cover; /* Escala la imagen para que sea lo mas grande posible */
+}
+
+div.contenido-header {
+  padding-top: 40px; /*Separamos nuestro contenedor "<div class="contenido-header"> 40px en la parte de arriba." */
+}
+
+@media only screen and (min-width:768px) {
+  div.contenido-header {
+    padding-top: 10px; /* Al ocupar 768px o mas el padding cambia a 10px */
+  }
+}
+
+nav.redes-sociales {
+  text-align: center; /* Centramos barra de redes sociales */
+}
+
+nav.redes-sociales a {
+  color: #ffffff;
+  font-size: 2em;
+  margin-right: 20px;
+}
+
+nav.redes-sociales a:last-child {
+  margin-right: 0; /*Al ultimo elemento de nuestors iconos le damos margen 0 */
+}
+
+div.informacion-evento {
+  text-align: center; /*Centramos el contenedor "informacion-evento" */
+  color: #ffffff;
+  padding: 15px;
+}
+
+div.informacion-evento #slogan  {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+@media only screen and (min-width:768px) {
+  div.informacion-evento {
+    width: 70%; /* El contenedor de informacion-evento se muestra al 70 % en pantalla mientras tenga un minimo de 768px. */
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+}
+
+div.informacion-evento p {
+  margin: 0; /* Se declaro el margen de 0 al parrafo, ya que por lo general le asigna un margen automatico. */
+  display: inline;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 480px) {
+  div.informacion-evento p {
+    margin: 0; /* Se declaro el margen de 0 al parrafo, ya que por lo general le asigna un margen automatico. */
+    display: inline;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+}
+
+div.informacion-evento p i {
+  color: #f34918; /* Color anaranjad de calendario y marker */
+  font-size: 2.4rem; /* Agrandamos el tamaño de los iconos de calendario y marker */
+}
+
+@media only screen and (max-width: 480px) {
+  div.informacion-evento p i {
+    color: #f34918; /* Color anaranjad de calendario y marker */
+    font-size: 1.3rem; /* Agrandamos el tamaño de los iconos de calendario y marker */
+  }
+}
+
+p.fecha {
+  float: left;
+}
+
+p.ciudad {
+  float: right;
+  text-align: right;
+}
+
+p.slogan {
+  text-transform: none!important; /* Se coloca como importante ya que el selector "div.informacion-evento" tiene mas peso y no lo tomaba en cuenta */
+}
+
+p.slogan span {
+  font-weight: bold; /*Se resaltan letras "Diseño web" */
+}
+
+h1.nombre-sitio { /* Se definie para la visualizacion en telefono movil */
+  font-size: 10vw;
+  text-transform: uppercase;
+  font-family: 'PT Sans', sans-serif;
+}
+
+@media only screen and (min-width:768px) { /* Se definie para la visualizacion en equipos de escritorio */
+  h1.nombre-sitio {
+    font-size: 11.5vw;
+    margin: 0; /* Declaramos el margen a 0 para eliminar el espacio de separacion en funcion al eslogan */
+    line-height: 1; /* Controlamos el espacio entre las lineas base del texto, reduciendo el espacion del contenedor "nombre-sitio" - GdlWebCamp -. */
+  }
+}
+
+/** Barra **/
+
+div.barra {
+  background-color: #353535;
+  padding: 20px 0;
+}
+
+.fixed {
+  position: fixed; /*Se utiliza para dejar un elemento en una posición fija*/
+  width: 100%; /*Por que al ponerle el fixed cambia el ancho*/
+  top: 0; /*Para que comience arriba */
+  left: 0; /* Para que comience en la izquierda*/
+  z-index: 2; /*Para que la barra no desaparezca cuando se hace scroll La propiedad CSS z-index indica el z-order de un elemento y sus descendientes. Cuando varios elementos se superponen, z-order determina cuales cubren a otros. Un elemento con mayor z-index generalmente cubre a otro menor.*/
+}
+
+div.logo {
+  width: 80%;
+  float: left;
+}
+
+div.logo img {
+  width: 100%;
+}
+
+@media only screen and (min-width:768px) {
+  div.logo {
+    width: 33%;
+    float: left; /*Logo de lado izquierdo */
+  }
+}
+
+/** Navegación principal **/
+
+nav.navegacion-principal  { /* Escondemos barra de navegación principal al estar en modo de telefono movil*/
+  display: none;
+  width: 100%;
+}
+
+nav.navegacion-principal a {
+  font-family: 'Oswald', sans-serif;
+  color: #ffffff;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .6s ease; /* Efecto visual al interactuar con los iconos */
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+  clear: both;
+}
+
+nav.navegacion-principal a:hover { /*Color al interactuar con los elementos del menu */
+  background-color: #fe4918;
+}
+
+nav.navegacion-principal a:last-child { /*Borde y color del ultimo elemento de la barra */
+  border: 2px solid #f34918;
+  color: #f34918;
+}
+
+nav.navegacion-principal a:last-child:hover {
+  color: #ffffff; /* Al interactuar las letras cambian en blanco */
+}
+
+@media only screen and (min-width:768px) { /* Navegación principal del lado derecho, en computador de escritorio  */
+  nav.navegacion-principal {
+    width: 67%;
+    float: right;
+    text-align: right;
+    display: block; /* Para que aparezco el menu de navegación ya que al activar el display none antirormente hace que desaparezca */
+  }
+  nav.navegacion-principal a {
+    padding: 10px 10px; /* Para alinearlo al centro con el titulo de la barra de menu */
+    display: inline-block;
+    width:auto;
+    display: inline-block;
+    text-align: center;
+    margin: 0 10px 0 0;
+  }
+}
+
+/** Menú Móvil **/
+
+div.menu-movil { /* Definimos los margenes, la posicion, el bloque del menu movil tipo sandiwch */
+  width: 60px;
+  display: block;
+  float: right;
+  text-align: right;
+  margin-top: 12px;
+}
+
+div.menu-movil:hover { /*Icono de a manito al interactura con el menu movil tipo sandwich */
+  cursor: pointer;
+}
+
+@media only screen and (min-width:768px) { /* Para ocultar en menu-movil cuando este en pantalla de escritorio */
+  div.menu-movil {
+    display: none;
+  }
+}
+
+div.menu-movil span {
+  height: 8px;
+  margin-bottom: 6px;
+  background-color: #ffffff;
+  display: block;
+}
+
+/** Talleres **/
+
+section.programa {
+  position: relative; /*El padre siempre debe estar en relative */
+}
+
+div.contenedor-video {
+  max-width: 100%;
+  overflow-x: hidden; /*especifica: si recortar contenido, dibujar barras de desplazamiento o mostrar el contenido excedente en un elemento a nivel de bloque. Esto es para que en caso del que el video se salga no permita recorrelo un poco mas*/
+}
+
+div.contenido-programa { /*Lo utilizamos para colocar el programa-evento del contenido programa encima del video*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+div.programa-evento {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  margin-top: 80px;
+}
+
+@media only screen and (min-width:768px) { /*Medida para tablet*/
+  div.programa-evento {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width:992px) { /*Medida para laptop o computadora de escritorio*/
+  div.programa-evento {
+    width: 50%;
+  }
+}
+
+nav.menu-programa {
+  width: 100%;
+}
+
+@media only screen and (min-width:992px) {
+  nav.menu-programa {
+    display: table; /*Para mostrar el en linea cuando estemos en modo de escritorio */
+  }
+}
+
+nav.menu-programa a {
+  display: block; /*Definimos el bloque para la parte movil*/
+  text-align: center; /*Aplica para todos los modelos*/
+  color: #000000;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  position: relative; /*Para poder posicionar la flecha que declaramos abajo en nav.menu-programa a.activo::after*/
+  padding-bottom: 10px; /*Para poder cuadrar la flecha con la linea de efecto vertical*/
+  border-bottom: 1px solid #f34918; /*Linea vertical */
+}
+
+nav.menu-programa a.activo::after {
+  position: absolute; /*Para posicionar nuestra flecha en el menu*/
+  content: ''; /*Porque utilizamos un after
+  // Para centrar la flecha basado en el ancho del link, la forma de posicionar un elemento de manera horizontal cuando utilizar posicion relativa y absoluta es asignando, left: 0; right: 0; margin-left: auto; margin-right: auto;*/
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  height: 20px;
+  width: 30px;
+  background-image: url('../img/talleres-flecha.jpg');
+  background-position: top center; /*Centramos la imagen*/
+  background-repeat: no-repeat; /*Para que no se repita la imagen*/
+  bottom: -20px;
+
+}
+
+@media only screen and (min-width:992px) { /*Comparando el CSS del proyecto completo, el lo define en 768px;*/
+  nav.menu-programa a {
+    display: table-cell; /*Para mostrar el menu en linea cuando estemos en modo de escritorio */
+  }
+}
+
+nav.menu-programa a i, div.detalle-evento p i {
+  color: #f34918;
+  font-size: 1.6em;
+  margin-right: 10px;
+}
+
+div.ocultar { /*Oculamos la informacion de los contenedores de menu-programa (talleres, conferencia, seminarios), tambien podemos hacerlos con jQuery, $('div.ocultar').hide(); Ocultamos los contenedores con la informacion del menu, la clase oculatr se declaro en las tres secciones.*/
+  display: none;
+}
+
+/** Detalle Evento **/
+
+div.detalle-evento {
+  margin-top: 20px;
+  border-bottom: 1px solid Black;
+  padding: 0px 20px;
+}
+
+div.detalle-evento span { /*Darle efecto al zbrush con el span, codigo agregado por mi*/
+  font-size: 1.4em;
+}
+
+div.detalle-evento:nth-child(2) {
+  border: none;
+}
+
+div.detalle-evento p {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+/** Invitados **/
+
+ul.lista-invitados li {
+  padding: 10px;
+  float: left; /* Hcemos que salgan dos imagenes en la misma linea, dependera del tamaño que tengamos definido */
+}
+
+@media only screen and (min-width:480px) { /*Para dispositivos moviles */
+  ul.lista-invitados li {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width:768px) { /* Para que se vean tres imagenes en fila */
+  ul.lista-invitados li {
+    width: 33.3%;
+  }
+}
+
+div.invitado {
+  position: relative;
+  overflow: hidden; /* En caso de que algo se salga no se muestre, se queda enmarcado en nuestro contenedor */
+}
+
+div.invitado img { /*Para que las imagenes se vean al 100% ya que al utilizar el "hidden" las imagenes se cortaron*/
+  max-width: 100%;
+  filter: gray; /* Filtro de escala de grisis para verisones como IE */
+  -webkit-filter: grayscale(1); /* Filtro gris para chrome */
+  -webkit-transition: all .5s ease-in-out; /*Efecto visual*/
+}
+
+div.invitado:hover img {
+  -webkit-filter: grayscale(0); /*Para devolverle el color a la imagen */
+  -webkit-transform: scale(1.1); /*Efecto de zoom*/
+
+}
+
+div.invitado p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 15px 10px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.55);
+  width: 100%;
+  text-align: left;
+  color: #f34918;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  -webkit-transition: all .5s ease-in-out; /*Efecto visual*/
+}
+
+div.invitado:hover p {
+  bottom: -80px; /*Para esconder el texto al interactuar*/
+  opacity: 0;
+}
+
+/** Contador **/
+
+.parallax::before { /* El efecto Parallax consiste en el movimiento de los diferentes elementos de una web a distintas velocidades mientras se hace scroll, dando la sensación de un movimiento real.*/
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-filter: brightness(.8);
+  filter: brightness(.8);
+}
+
+
+div.contador {
+  position: relative;
+  height: auto;
+}
+
+div.contador::before { /*Para colocar la imagen y se vea el contenido encima*/
+  background-image: url(../img/bg-resumen.jpg);
+  content: '';
+}
+
+ul.resumen-evento {
+  position: relative;
+  padding: 120px 0;
+}
+
+ul.resumen-evento li {
+  width: 50%;
+  float: left;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+}
+
+@media only screen and (min-width:768px) {
+  ul.resumen-evento li {
+    width: 25%;
+  }
+}
+
+p.numero {
+  color: #f34918;
+  font-size: 4em;
+  display: block;
+  margin: 0 0 10px 0;
+  font-family: 'Oswald', sans-serif;
+}
+
+/**Tabla de Precios**/
+
+ul.lista-precios > li { /*Para que solo se vea una columna en dispositivos moviles*/
+  padding: 10px;
+  }
+
+@media only screen and (min-width:768px) { /*Para tres diviones en equipos grandes*/
+  ul.lista-precios > li {
+    float: left;
+    width: 33.3% /*3 divisiones*/
+  }
+}
+
+div.tabla-precio { /*Borde y alineacion de texto en tabla*/
+  border: 1px solid #e1e1e1;
+  background-color: #ffffff;
+  padding: 40px 0;
+  text-align: center;
+  transition: all .3s ease;
+}
+
+div.tabla-precio:hover {
+  transform: scale(1.1);
+  border: 1px solid #f34918;
+  box-shadow: 0px 0px 50px #666;
+}
+
+div.tabla-precio ul li { /*Formato de letra*/
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #868686;
+  line-height: 26px;
+}
+
+div.tabla-precio ul li::before { /*Fuente: fontawesome.com/how-to-use/on-the-web/advanced/css-pseudo-elements*/ /*icono de check*/
+  font-family: 'font awesome 5 free';
+  font-weight: 900;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 5px;
+  font-size: 20px;
+  color: green;
+  -webkit-font-smoothing: antialiased;
+  content: '\f00c';
+}
+
+div.tabla-precio h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+div.tabla-precio p.numero {
+  color: #000000;
+  margin-top: 20px 0;
+}
+
+/** Mapa **/
+
+div.mapa {
+  height: 420px;
+  z-index: 1; /*Para que no desaparezca el menu fijo al pasar por el mapa, creado por mi*/
+}
+
+
+/** Testimoniales **/
+
+div.testimoniales { /*El contenedor de todo*/
+  padding-bottom: 20px;
+}
+
+div.testimonial {
+  padding: 5px;
+}
+
+@media only screen and (min-width:768px) {
+  div.testimonial {
+    float: left;
+    width: 33.3%;
+  }
+}
+
+blockquote {
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1;
+  position: relative; /*Lo ponemos en posicion relativa para luego poder poner la imagen de las comillas en posicion absoluta*/
+  margin: 0 0 10px 0;
+  padding-bottom: 20px;
+}
+
+blockquote p {
+  text-align: justify!important;
+  font-size: 1em!important;
+  font-family: 'PT Sans', sans-serif;
+  padding: 0 20px 0 65px;
+
+}
+
+blockquote p::before {
+  content: '\201c';
+  position: absolute;
+  left: 13px;
+  top: 8px;
+  font-size: 8rem;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  color: #f34918;
+}
+
+footer.info-testimonial {
+  padding: 0;
+  background-color: transparent; /*Para que no aplique el color agregado en el footer de la seccion "footer", tambien se podria quitar este y colocarle mas peso al selector del footer real*/
+}
+
+footer.info-testimonial img {
+  float: left;
+  width: 20%;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+footer.info-testimonial cite {
+  text-align: left;
+  color: #f34918;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-top: 20px;
+  width: 66.6%;
+  float: right;
+  font-weight: bold;
+  font-style: normal;
+}
+
+footer.info-testimonial cite span {
+  color: #000000;
+  display: block; /* Para colocarlo como bloque en la parte de abajo, tambien podemos hacerlo con un br en el html*/
+  text-transform: none; /*Para no heredar el text-transform: uppercase*/
+  margin-top: 5px;
+}
+
+/**Newsletter**/
+
+div.newsletter {
+  position: relative;
+  height: auto;
+
+}
+
+div.newsletter::before {
+  background-image: url(../img/bg-newsletter.jpg);
+  content: '';
+}
+
+div.newsletter .contenido {
+  padding: 100px 0;
+  color: #ffffff;
+  text-align: center;
+  position: relative; /*Para sobreponer el contenido en la imagen*/
+}
+
+div.newsletter .contenido p {
+  font-size: 1.2em;
+  text-transform: lowercase;
+}
+
+div.newsletter .contenido h3 {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 7vw;
+  font-family: 'PT Sans', sans-serif;
+}
+
+/**Faltan**/
+
+div.cuenta-regresiva ul li  {
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+@media only screen and (min-width:768px) {
+  div.cuenta-regresiva ul li {
+    float: left;
+    width: 25%;
+  }
+}
+
+/**Footer**/
+
+footer {
+  background-color: #353535;
+  padding-top: 40px;
+  margin-top: 20px;
+}
+
+footer .contenedor > div {
+  color: #ffffff;
+  padding: 0px 20px;
+  font-size: 12px;
+}
+
+@media only screen and (min-width:768px) {
+  footer .contenedor > div {
+    width: 33.3%;
+    float: left;
+  }
+}
+
+footer h3{
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 20px;
+}
+
+footer span {
+  color: #f34918;
+}
+
+footer .ultimos-tweets li {
+  margin-bottom: 10px;
+}
+
+footer nav.redes-sociales {
+  text-align: left;
+}
+
+p.copyright{
+  background-color: #2e2e2e;
+  color: #ffffff;
+  padding: 10px 0;
+  margin: 20px 0 0 0;
+  text-align: center;
+}
+
+
+/*** INTERNAS **/
+
+/*Galeria de fotos, conferencia.html*/
+
+body.conferencia .navegacion-principal .activo {
+  border-bottom: 2px solid #fe4918;
+}
+
+/*Codigo de "div.galeria" creado por mi, Juan Carlos, para centrarlo. Chequear mejores posibilidades. Seccion 38,clase 290*/
+div.galeria {
+  display: inline-block;
+  text-align: center;
+}
+
+div.galeria a {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+/* Registro */
+
+form.registro h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 20px 0 0 0;
+}
+
+form.registro label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+h4 {
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid #fe4918; /*Línea naranja*/
+  padding-bottom: 10px;
+  font-size: 1.2em;
+}
+
+div.caja {
+  background-color: white;
+  border: 1px solid #e1e1e1;
+  padding: 10px;
+  margin: 10px;
+}
+
+div.campo { /* Para los campos de Registro*/
+  padding: 20px;
+}
+
+@media only screen and (min-width:768px) {
+  div.campo {
+    float: left;
+    width: 33.3%;
+  }
+}
+
+div.paquetes .tabla-precio:hover { /*Solo existe en el registro.html no en el index.html, aplicamos el hover para deshacernos del efecto creado en el index*/
+  transform: none;
+  box-shadow: none;
+}
+
+div.paquetes .tabla-precio input {
+  clear: both;
+  width: 100px;
+  margin: 10px auto 0 auto;
+  display: block;
+}
+
+.contenido-dia {
+  padding: 20px;
+  display: none; /* Hacemos que desaparezcan nuestros talleres y al seleccionar el pase lo mostraemos utilizando JS. */
+}
+
+@media only screen and (min-width:768px) { /* Flotamos el div de talleres para agruparlos en tres columnas*/
+  .contenido-dia > div { /*El primer elemento hijo, osea, el div de talleres*/
+    float: left;
+    width: 33.3%;
+  }
+}
+
+.contenido-dia > div p { /*Parrafos a la izquierda*/
+  text-align: left;
+}
+
+.contenido-dia > div label { /*Ponemos las etiquetas en bloque para que esten una debajo de otra*/
+  display: block;
+  margin-bottom: 10px;
+}
+
+.contenido-dia > div input {
+  margin-right: 10px;
+}
+
+.contenido-dia > div label time {
+  color: #fe4918;
+  font-weight: bold;
+}
+
+/* Resumen registro */
+
+div.resumen p {
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+div.resumen div.extras {
+  float: left;
+  width: 50%;
+  padding: 30px;
+}
+
+div.extras div.orden {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+div.extras div.orden input {
+  margin: 10px 0 0 0;
+}
+
+div.resumen div.total {
+  float: right;
+  width: 50%;
+  padding: 30px;
+}
+
+div.resumen input {
+  display: block;
+  margin: 10px auto;
+}
+
+#lista-productos { /*Recuadro de la lista de productos*/
+  background-color: #e1e1e1;
+  padding: 20px;
+  display: none; /*Con el codigo en JS lista_productos.style.display = "block" y este, hacemos que el recuadro gris del resumen este oculto hasta que se le de clik y lo activamos en el JS;*/
+}
+
+#suma-total {
+  text-align: center;
+  font-size: 2em;
+  color: #fe4918;
+}
+
+#error {
+  clear: both;
+  padding: 20px;
+  text-align: center;
+  display: none;
+}
+
+/**Colorbox**/
+
+div.cboxElement { /*Esta clase la tomamos al inspeccionar las imagenes con plugins, que son las clases que agrega el plugin.*/
+  padding: 50px!important;
+  text-align: center; /*Para centrar texto e imagen*/
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

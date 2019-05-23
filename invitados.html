@@ -1,0 +1,278 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/all.min.css"> <!-- Se carga antes del main -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|PT+Sans" rel="stylesheet">
+  <!-- Importamos las fuentes que vamos a utilizar -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
+  <!-- Importamos en mapa desde https://leafletjs.com -->
+  <link rel="stylesheet" href="css/colorbox.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <header class="site-header">
+    <!-- Apertura site-header -->
+    <div class="hero">
+      <!-- Apertura hero, hero= Imagen vista principal pagina Web -->
+      <div class="contenido-header">
+        <!-- Apertura contenido-header, el cual contendra la barra de redes sociales -->
+
+        <nav class="redes-sociales">
+          <!-- Apertura redes-sociales, barra de redes sociales -->
+          <a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a> <!-- Icono de facebook -->
+          <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a> <!-- Icono de twitter -->
+          <a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a> <!-- Icono de pinterest -->
+          <a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a> <!-- Icono de youtube -->
+          <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a> <!-- Icono de instagram -->
+        </nav> <!-- Cierre barra de redes sociales -->
+
+        <div class="informacion-evento">
+          <!-- Apertura informacion-eventos -->
+
+          <div class="clearfix">
+            <!-- Apertura Clearfix -->
+            <p class="fecha"><i class="far fa-calendar-alt" aria-hidden="true"></i> 10-12 Dic</p>
+            <p class="ciudad"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Santiago de Chile</p>
+          </div> <!-- Cierre Clearfix -->
+
+          <a href="index.html" id="slogan">
+              <h1 class="nombre-sitio">GdlWebCamp</h1> <!-- Nombre del Sitio Web -->
+              <p class="slogan">La mejor conferencia de <span>diseño web</span></p> <!-- Eslogan del Sitio Web -->
+          </a>
+
+        </div> <!-- Cierre informacion-eventos -->
+
+      </div> <!-- Cierre contenido-header -->
+    </div> <!-- Cierre de hero -->
+  </header> <!-- Cierre site-header -->
+
+  <div class="barra">
+    <!-- Apertura barra de navegación -->
+    <div class="contenedor clearfix">
+      <!-- Apertura contenedor de contenido en barra de navegación, se puede llamar el clearfix definido en el css sin afectar la clase "contenedor" -->
+
+      <div class="logo">
+        <!-- Apertura de logo de barra de navegación -->
+        <a href="index.html">
+          <img src="img/logo.svg" alt="logo gdlwebcamp">
+          <!-- Los archivos .svg son imagenes vectoriales, no se distorcionan al manipular la imagen ya que son calculos matematicos  -->
+        </a>
+      </div> <!-- Cierre de logo de barra de navegación -->
+
+      <div class="menu-movil">
+        <!-- Apertura menu-movil, menu para el telefono móvil, se realizan las barran con el span para dar efecto de tipo sandiwch, su vista sera para telefono movil y se accionara con jQuery y CSS -->
+        <span></span>
+        <span></span>
+        <span></span>
+      </div> <!-- Cierre menu-movil -->
+
+      <nav class="navegacion-principal actvio clearfix">
+        <!-- Apertura navegación-principal, utiizamos clearfix sin afectar la clase para arreglar errores de posicion, con los media query lo mostramos en pantallas grandes y lo escondemos con CSS para que trabaje en funcion con el menu-movil -->
+        <a href="conferencia.html">Conferencia</a>
+        <a href="#">Calendario</a>
+        <a href="invitados.html">Invitados</a>
+        <a href="registro.html">Reservaciones</a>
+      </nav> <!-- Cierre navegación-principal -->
+
+    </div> <!-- Cierre contenedor de contenido en barra de navegación -->
+  </div> <!-- Cierre barra de navegación -->
+
+  <section class="invitados contenedor seccion">
+    <!-- Apertura de invitados -->
+    <h2>Nuestros Invitados</h2>
+    <ul Class="lista-invitados clearfix">
+      <!-- Apertura de lista-invitados -->
+      <li>
+        <div class="invitado">
+          <a class="invitado-info" href="#invitado1">
+            <img src="img/invitado1.jpg" alt="imagen invitado">
+            <p>Rafael Bautista</p>
+          </a>
+        </div>
+      </li>
+
+      <div style="display:none;">
+        <div class="invitado-info" id="invitado1">
+          <h2>Rafael Bautista</h2>
+          <img style="max-width:100%;" src="img/invitado1.jpg" alt="">
+          <p>Praesent rutrum efficitur pharetra. Vivamus scelerisque pretium velit, id tempor turpis pulvinar et. Ut
+            bibendum finibus massa non molestie.</p>
+        </div>
+      </div>
+
+      <li>
+        <div class="invitado">
+          <a class="invitado-info" href="#invitado2">
+              <img src="img/invitado2.jpg" alt="imagen invitado">
+              <p>Shari Herrera</p>
+          </a>
+        </div>
+      </li>
+
+      <div style="display:none;">
+          <div class="invitado-info" id="invitado2">
+            <h2>Shari Herrera</h2>
+            <img style="max-width:100%;" src="img/invitado2.jpg" alt="">
+            <p>Praesent rutrum efficitur pharetra. Vivamus scelerisque pretium velit, id tempor turpis pulvinar et. Ut
+              bibendum finibus massa non molestie.</p>
+          </div>
+        </div>
+
+      <li>
+        <div class="invitado">
+          <a class="invitado-info" href="#invitado3">
+              <img src="img/invitado3.jpg" alt="imagen invitado">
+              <p>Greogrio Sanchez</p>
+          </a>
+        </div>
+      </li>
+
+      <div style="display:none;">
+          <div class="invitado-info" id="invitado3">
+            <h2>Greogrio Sanchez</h2>
+            <img style="max-width:100%;" src="img/invitado3.jpg" alt="">
+            <p>Praesent rutrum efficitur pharetra. Vivamus scelerisque pretium velit, id tempor turpis pulvinar et. Ut
+              bibendum finibus massa non molestie.</p>
+          </div>
+        </div>
+
+      <li>
+        <div class="invitado">
+          <a class="invitado-info" href="#invitado4">
+              <img src="img/invitado4.jpg" alt="imagen invitado">
+              <p>Susana Rivera</p>
+          </a>
+        </div>
+      </li>
+
+      <div style="display:none;">
+          <div class="invitado-info" id="invitado4">
+            <h2>Susana Rivera</h2>
+            <img style="max-width:100%;" src="img/invitado4.jpg" alt="">
+            <p>Praesent rutrum efficitur pharetra. Vivamus scelerisque pretium velit, id tempor turpis pulvinar et. Ut
+              bibendum finibus massa non molestie.</p>
+          </div>
+        </div>
+
+      <li>
+        <div class="invitado">
+          <a class="invitado-info" href="#invitado5">
+              <img src="img/invitado5.jpg" alt="imagen invitado">
+              <p>Harold Garcia</p>
+          </a>
+        </div>
+      </li>
+
+      <div style="display:none;">
+          <div class="invitado-info" id="invitado5">
+            <h2>Harold Garcia</h2>
+            <img style="max-width:100%;" src="img/invitado5.jpg" alt="">
+            <p>Praesent rutrum efficitur pharetra. Vivamus scelerisque pretium velit, id tempor turpis pulvinar et. Ut
+              bibendum finibus massa non molestie.</p>
+          </div>
+        </div>
+
+      <li>
+        <div class="invitado">
+          <a class="invitado-info" href="#invitado6">
+              <img src="img/invitado6.jpg" alt="imagen invitado">
+              <p>Susan Sanchez</p>
+          </a>
+        </div>
+      </li>
+
+      <div style="display:none;">
+          <div class="invitado-info" id="invitado6">
+            <h2>Susan Sanchez</h2>
+            <img style="max-width:100%;" src="img/invitado6.jpg" alt="">
+            <p>Praesent rutrum efficitur pharetra. Vivamus scelerisque pretium velit, id tempor turpis pulvinar et. Ut
+              bibendum finibus massa non molestie.</p>
+          </div>
+        </div>
+
+    </ul> <!-- Cierre de lista-invitados -->
+  </section> <!-- Cierre de invitados -->
+
+  <!-- Footer  -->
+
+  <footer class="site-footer">
+    <div class="contenedor clearfix">
+      <!-- Apertura de contenedor clearfix  -->
+
+      <div class="footer-informacion">
+        <h3>Sobre <span>gdlwebcamp</span></h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua tempor incididunt ut labore et dolore magna</p>
+      </div>
+
+      <div class="ultimos-tweets">
+        <h3>Últimos <span>tweets</span></h3>
+        <ul>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna .</li>
+        </ul>
+      </div>
+
+      <div class="menu">
+        <h3>Redes <span>sociales</span></h3>
+        <nav class="redes-sociales">
+          <!-- Apertura redes-sociales, barra de redes sociales -->
+          <a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a> <!-- Icono de facebook -->
+          <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a> <!-- Icono de twitter -->
+          <a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a> <!-- Icono de pinterest -->
+          <a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a> <!-- Icono de youtube -->
+          <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a> <!-- Icono de instagram -->
+        </nav> <!-- Cierre barra de redes sociales -->
+      </div>
+    </div> <!-- Cierre de contenedor clearfix  -->
+    <p class="copyright">Todos los derechos reservados GDLWEBCAMP 2019.</p>
+  </footer>
+
+  <!-- Add your site or application content here -->
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <!-- Nuestro plugin de contador descargado de http://aishek.github.io/jquery-animateNumber/ -->
+  <script src="js/jquery.countdown.min.js"></script>
+  <!-- Nuestro plugin de contador(Cuenta regresiva) descargado de http://hilios.github.io/jQuery.countdown/ -->
+  <script src="js/jquery.lettering.js"></script>
+  <!-- Nuestro plugin para el efecto de las letras de https://github.com/davatron5000/Lettering.js -->
+  <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+  <script src="js/jquery.colorbox-min.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+</body> <!-- Cierre del body -->
+
+</html>

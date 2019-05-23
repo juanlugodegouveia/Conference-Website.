@@ -1,0 +1,189 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/all.min.css"> <!-- Se carga antes del main -->
+  <link rel="stylesheet" href="css/lightbox.css"> <!-- CSS para el efecto de las imagenes -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|PT+Sans" rel="stylesheet"> <!-- Importamos las fuentes que vamos a utilizar -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="conferencia"> <!-- Creamos la clase de conferencia para poder utilizarla en el css y darle el efecto de la barra abajo de lo seleccionado -->
+  <!--[if lte IE 9]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+<header class="site-header"> <!-- Apertura site-header -->
+   <div class="hero"> <!-- Apertura hero, hero= Imagen vista principal pagina Web -->
+   <div class="contenido-header"> <!-- Apertura contenido-header, el cual contendra la barra de redes sociales -->
+
+    <nav class="redes-sociales"> <!-- Apertura redes-sociales, barra de redes sociales -->
+     <a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>  <!-- Icono de facebook -->
+     <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a> <!-- Icono de twitter -->
+     <a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a> <!-- Icono de pinterest -->
+     <a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a> <!-- Icono de youtube -->
+     <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a> <!-- Icono de instagram -->
+    </nav> <!-- Cierre barra de redes sociales -->
+
+    <div class="informacion-evento"> <!-- Apertura informacion-eventos -->
+
+      <div class="clearfix"> <!-- Apertura Clearfix -->
+        <p class="fecha"><i class="far fa-calendar-alt" aria-hidden="true"></i> 10-12 Dic</p>
+        <p class="ciudad"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Santiago de Chile</p>
+      </div> <!-- Cierre Clearfix -->
+
+      <a href="index.html" id="slogan">
+          <h1 class="nombre-sitio">GdlWebCamp</h1> <!-- Nombre del Sitio Web -->
+          <p class="slogan">La mejor conferencia de <span>diseño web</span></p> <!-- Eslogan del Sitio Web -->
+      </a>
+
+     </div> <!-- Cierre informacion-eventos -->
+
+    </div> <!-- Cierre contenido-header -->
+    </div> <!-- Cierre de hero -->
+</header> <!-- Cierre site-header -->
+
+<div class="barra"> <!-- Apertura barra de navegación -->
+ <div class="contenedor clearfix"> <!-- Apertura contenedor de contenido en barra de navegación, se puede llamar el clearfix definido en el css sin afectar la clase "contenedor" -->
+
+   <div class="logo"> <!-- Apertura de logo de barra de navegación -->
+     <a href="index.html">
+     <img src="img/logo.svg" alt="logo gdlwebcamp"> <!-- Los archivos .svg son imagenes vectoriales, no se distorcionan al manipular la imagen ya que son calculos matematicos  -->
+     </a>
+   </div>  <!-- Cierre de logo de barra de navegación -->
+
+    <div class="menu-movil"> <!-- Apertura menu-movil, menu para el telefono móvil -->
+      <span></span>
+      <span></span>
+      <span></span>
+    </div> <!-- Cierre menu-movil -->
+
+    <nav class="navegacion-principal clearfix"> <!-- Apertura navegación-principal, utiizamos clearfix sin afectar la clase para arreglar errores de posicion -->
+      <a href="#" class="activo">Conferencia</a> <!-- Creamos la clase "activo" para darle el efecto de la barra que indica que esta seleccionada la pantalla. Va en funcion al CSS y a la clase "conferencia que declaramos en el body" -->
+      <a href="#">Calendario</a>
+      <a href="#">Invitados</a>
+      <a href="registro.html">Reservaciones</a>
+    </nav> <!-- Cierre navegación-principal -->
+
+ </div> <!-- Cierre contenedor de contenido en barra de navegación -->
+</div> <!-- Cierre barra de navegación -->
+
+<!-- Sección de información -->
+
+<section class="seccion contenedor"> <!-- Apertura de Sección información -->
+  <h2>La mejor conferencia de diseño web en español</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+</section> <!-- Cierre de Sección información -->
+
+<section class="seccion contenedor"> <!-- Apertura de Sección para Galería de fotos, seccion 38, clase 290-->
+  <h2>Galería de fotos</h2>
+
+  <div class="galeria">
+    <a href="img/galeria/01.jpg" data-lightbox="galeria"> <!-- Utilizamos el data-lightbox="galeria" en funcion al plugin, se encarga de llamar al archivo de JS  -->
+      <img src="img/galeria/thumbs/01.jpg" alt=""> <!-- colocamos esta ruta para las imagenes en miniatura, sintaxis para el plugin  -->
+    </a>
+
+    <a href="img/galeria/02.jpg" data-lightbox="galeria"> <!-- Utilizamos el data-lightbox="galeria" en funcion al plugin, se encarga de llamar al archivo de JS  -->
+      <img src="img/galeria/thumbs/02.jpg" alt=""> <!-- colocamos esta ruta para las imagenes en miniatura, sintaxis para el plugin  -->
+    </a>
+
+    <a href="img/galeria/03.jpg" data-lightbox="galeria"> <!-- Utilizamos el data-lightbox="galeria" en funcion al plugin, se encarga de llamar al archivo de JS  -->
+      <img src="img/galeria/thumbs/03.jpg" alt=""> <!-- colocamos esta ruta para las imagenes en miniatura, sintaxis para el plugin  -->
+    </a>
+
+    <a href="img/galeria/04.jpg" data-lightbox="galeria"> <!-- Utilizamos el data-lightbox="galeria" en funcion al plugin, se encarga de llamar al archivo de JS  -->
+      <img src="img/galeria/thumbs/04.jpg" alt=""> <!-- colocamos esta ruta para las imagenes en miniatura, sintaxis para el plugin  -->
+    </a>
+
+    <a href="img/galeria/05.jpg" data-lightbox="galeria"> <!-- Utilizamos el data-lightbox="galeria" en funcion al plugin, se encarga de llamar al archivo de JS  -->
+      <img src="img/galeria/thumbs/05.jpg" alt=""> <!-- colocamos esta ruta para las imagenes en miniatura, sintaxis para el plugin  -->
+    </a>
+
+    <a href="img/galeria/06.jpg" data-lightbox="galeria"> <!-- Utilizamos el data-lightbox="galeria" en funcion al plugin, se encarga de llamar al archivo de JS  -->
+      <img src="img/galeria/thumbs/06.jpg" alt=""> <!-- colocamos esta ruta para las imagenes en miniatura, sintaxis para el plugin  -->
+    </a>
+
+    <a href="img/galeria/07.jpg" data-lightbox="galeria"> <!-- Utilizamos el data-lightbox="galeria" en funcion al plugin, se encarga de llamar al archivo de JS  -->
+      <img src="img/galeria/thumbs/07.jpg" alt=""> <!-- colocamos esta ruta para las imagenes en miniatura, sintaxis para el plugin  -->
+    </a>
+
+    <a href="img/galeria/08.jpg" data-lightbox="galeria"> <!-- Utilizamos el data-lightbox="galeria" en funcion al plugin, se encarga de llamar al archivo de JS  -->
+      <img src="img/galeria/thumbs/08.jpg" alt=""> <!-- colocamos esta ruta para las imagenes en miniatura, sintaxis para el plugin  -->
+    </a>
+
+    <a href="img/galeria/09.jpg" data-lightbox="galeria"> <!-- Utilizamos el data-lightbox="galeria" en funcion al plugin, se encarga de llamar al archivo de JS  -->
+      <img src="img/galeria/thumbs/09.jpg" alt=""> <!-- colocamos esta ruta para las imagenes en miniatura, sintaxis para el plugin  -->
+    </a>
+
+    <a href="img/galeria/10.jpg" data-lightbox="galeria"> <!-- Utilizamos el data-lightbox="galeria" en funcion al plugin, se encarga de llamar al archivo de JS  -->
+      <img src="img/galeria/thumbs/10.jpg" alt=""> <!-- colocamos esta ruta para las imagenes en miniatura, sintaxis para el plugin  -->
+    </a>
+
+  </div>
+</section> <!-- Cierre de Sección para Galería de fotos -->
+
+<!-- Footer  -->
+
+<footer class="site-footer">
+  <div class="contenedor clearfix"> <!-- Apertura de contenedor clearfix  -->
+
+    <div class="footer-informacion">
+      <h3>Sobre <span>gdlwebcamp</span></h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua  tempor incididunt ut labore et dolore magna</p>
+    </div>
+
+    <div class="ultimos-tweets">
+      <h3>Últimos <span>tweets</span></h3>
+      <ul>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna .</li>
+      </ul>
+    </div>
+
+    <div class="menu">
+      <h3>Redes <span>sociales</span></h3>
+      <nav class="redes-sociales"> <!-- Apertura redes-sociales, barra de redes sociales -->
+       <a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>  <!-- Icono de facebook -->
+       <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a> <!-- Icono de twitter -->
+       <a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a> <!-- Icono de pinterest -->
+       <a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a> <!-- Icono de youtube -->
+       <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a> <!-- Icono de instagram -->
+      </nav> <!-- Cierre barra de redes sociales -->
+   </div>
+    </div> <!-- Cierre de contenedor clearfix  -->
+    <p class="copyright">Todos los derechos reservados GDLWEBCAMP 2019.</p>
+  </footer>
+
+  <!-- Add your site or application content here -->
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script> <!-- Nuestro plugin de contador descargado de http://aishek.github.io/jquery-animateNumber/ -->
+  <script src="js/jquery.countdown.min.js"></script> <!-- Nuestro plugin de contador(Cuenta regresiva) descargado de http://hilios.github.io/jQuery.countdown/ -->
+  <script src="js/jquery.lettering.js"></script> <!-- Nuestro plugin para el efecto de las letras de https://github.com/davatron5000/Lettering.js -->
+  <script src="js/lightbox.js"></script> <!-- Nuestro plugin para el efecto en la galería de imagenes. seccion 38, clase 290 https://lokeshdhakar.com/projects/lightbox2/ -->
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+</body> <!-- Cierre del body -->
+
+</html>
