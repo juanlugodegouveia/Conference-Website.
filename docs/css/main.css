@@ -671,7 +671,7 @@ div.invitado:hover p {
 @media (max-width: 749px) {
   .parallax::before  {
     background-attachment: inherit;
-    filter: brightness(.8);
+    filter: brightness(.3);
   }
 }
 
