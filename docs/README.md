@@ -4,7 +4,7 @@ Diseño Front End, sin frameworks, utilizando HTML 5, CSS 3, JavaScript, jQuery.
 
 Un diseño simple e interactivo con el cual podrían guisarse para futuros proyectos, la intención es dar una idea de como podrían realizarlo y ahorrar tiempo.
 
-Vista Previa: https://juanlugodegouveia.github.io/AdminFlex/.
+Vista Previa: https://juanlugodegouveia.github.io/Conference-Website./.
 
 ## Copyright
 
