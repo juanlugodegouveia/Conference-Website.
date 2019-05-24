@@ -1113,6 +1113,26 @@ div.cboxElement { /*Esta clase la tomamos al inspeccionar las imagenes con plugi
   text-align: center; /*Para centrar texto e imagen*/
 }
 
+@media (max-width:480px) {
+  #cboxLoadedContent h2 {
+    font-size: 1.1em;
+    display: inline-block;
+    text-align: center;
+  }
+
+  #cboxLoadedContent h2::after {
+    display: none;
+  }
+
+  #cboxLoadedContent img {
+    display: none;
+  }
+
+  #cboxLoadedContent p {
+    font-size: 0.8em;
+    text-align: center;
+  }
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
