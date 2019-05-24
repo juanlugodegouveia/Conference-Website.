@@ -1001,6 +1001,14 @@ div.caja {
   margin: 10px;
 }
 
+@media only screen and (max-width:480px) {
+  div.caja {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 div.campo { /* Para los campos de Registro*/
   padding: 20px;
 }
@@ -1067,6 +1075,14 @@ div.resumen div.extras {
   padding: 30px;
 }
 
+@media (max-width:480px) {
+  div.resumen div.extras {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 div.extras div.orden {
   text-align: left;
   margin-bottom: 10px;
@@ -1076,10 +1092,32 @@ div.extras div.orden input {
   margin: 10px 0 0 0;
 }
 
+@media (max-width:480px) {
+  div.extras div.orden input {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 div.resumen div.total {
   float: right;
   width: 50%;
   padding: 30px;
+}
+
+@media (max-width:480px) {
+  div.resumen div.total {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    width: 200px;
+  }
+
+  div.resumen div.total div.test {
+    margin: 0 auto;
+  }
 }
 
 div.resumen input {
@@ -1087,10 +1125,19 @@ div.resumen input {
   margin: 10px auto;
 }
 
+@media (max-width:480px) {
+  div.resumen input {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 0 0;
+  }
+}
+
 #lista-productos { /*Recuadro de la lista de productos*/
   background-color: #e1e1e1;
   padding: 20px;
   display: none; /*Con el codigo en JS lista_productos.style.display = "block" y este, hacemos que el recuadro gris del resumen este oculto hasta que se le de clik y lo activamos en el JS;*/
+  text-align: center!important;
 }
 
 #suma-total {

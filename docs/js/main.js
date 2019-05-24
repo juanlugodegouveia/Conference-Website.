@@ -123,19 +123,24 @@ if(mapa) {
                 var listadoProductos = []; //Creamos un arreglo, luego utilizamos el metodo .push para irlos anexando al arreglo
 
                 if (boletosDia >= 1) { //Validamos para que solo se muestren los seleccionados
-                    listadoProductos.push(boletosDia + ' Pases por día');
+                  listadoProductos.push('Pases por día: ' + boletosDia);
+                    // listadoProductos.push(boletosDia + ' Pases por día');
                 }
                 if (boletosDosDias >= 1) {
-                    listadoProductos.push(boletosDosDias + ' Pases por dos días');
+                  listadoProductos.push('Pases por dos días: ' + boletosDosDias);
+                    // listadoProductos.push(boletosDosDias + ' Pases por dos días');
                 }
                 if (boletoCompleto >= 1) {
-                    listadoProductos.push(boletoCompleto + ' Pases completos');
+                  listadoProductos.push('Pases completos: ' + boletoCompleto);
+                    // listadoProductos.push(boletoCompleto + ' Pases completos');
                 }
                 if (cantCamisas >= 1) {
-                    listadoProductos.push(cantCamisas + ' Camisas');
+                  listadoProductos.push('Camisas: ' + cantCamisas);
+                    // listadoProductos.push(cantCamisas + ' Camisas');
                 }
                 if (cantEtiquetas >= 1) {
-                    listadoProductos.push(cantEtiquetas + ' Etiquetas');
+                  listadoProductos.push('Etiquetas: ' + cantEtiquetas);
+                    // listadoProductos.push(cantEtiquetas + ' Etiquetas');
                 }
 
                 lista_productos.style.display = "block"; //Este codigo nos permite hacer visible el recuadro gris de la lista de productos al darle click, anteriormente oculto en el css.
