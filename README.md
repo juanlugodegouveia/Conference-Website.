@@ -1,10 +1,9 @@
-# Sitio Web para Conferencias - GDLWEBCAMP.
+# Conference Website - GDLWEBCAMP.
 
-Plantilla Front End, sin implementación de frameworks, utilizando HTML 5, CSS 3, JavaScript, jQuery. Además de las tecnologías anteriormente descritas, el proyecto consta de un diseño solido en donde se utilizan galerías, formularios, validaciones, implementación de MailChimp, Twitter Feed y Leaflet.
-
+Front End Design, without frameworks, using HTML 5, CSS 3, JavaScript and jQuery. In addition to the technologies previously described, the project consists of a solid design using galleries, forms, validations, MailChimp, Twitter Feed and Leaflet implementation.
 Un diseño simple e interactivo.
 
-Vista Previa: https://juanlugodegouveia.github.io/Conference-Website./.
+Preview: https://juanlugodegouveia.github.io/Conference-Website./.
 
 ## Copyright
 
